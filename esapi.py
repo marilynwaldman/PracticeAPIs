@@ -17,12 +17,12 @@ def testsearch(uri):
   })
 
   response = requests.get(uri,   headers={"Content-type":"application/json"}, data=query)
-  print(response)
+  print(response.json())
   results = json.loads(response.text)
   pp.pprint(results)
   return results
 
-  pp.pprint(results)
+  #pp.pprint(results)
 
 
 res = testsearch(uri)
